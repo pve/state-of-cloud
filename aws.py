@@ -4,8 +4,10 @@ from __future__ import print_function
 # By Peter HJ van Eijk 
 
 # uses env variables for AWS authentication.
+# preparation:
 # sudo easy_install awscli
-# command line version: aws configure
+# aws configure
+## command line test: 
 # aws ec2 describe-availability-zones
 
 import json
@@ -28,6 +30,7 @@ def reservations():
         print(ec2con.describe_instances()['Reservations'])
 
 reservations()
+
 print("S3 buckets...")
 s3 = boto3.client('s3')
 s3 = boto3.resource('s3')
@@ -37,4 +40,5 @@ for bucket in s3.buckets.all():
     
 print("")    
 
-# more ideas. Pull status info from other API endpoints. I.e. IOT devices. DNS providers. 
+# more ideas. Pull status info from other API endpoints. I.e. IOT devices. DNS providers.
+# time requests. error handling
