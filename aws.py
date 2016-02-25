@@ -16,13 +16,14 @@ import boto3
 
 ec2 = boto3.client('ec2')
 
-print("Regions", end=" ")
+print("Regions: ", end=" ")
 regions = ec2.describe_regions().get('Regions',[] )
 regionnames = [x.get('RegionName', []) for x in regions]
 print(regionnames)
-print("Zones", end=" "),
+print("Zones: ", end=" "),
 print(ec2.describe_availability_zones()['AvailabilityZones'])
-zonenames = [x.get('AvailabilityZones', []) for x in zones]
+zones = ec2.describe_availability_zones()['AvailabilityZones']
+zonenames = [x.get('ZoneName', []) for x in zones]
 print(zonenames)
 
 def reservations():
