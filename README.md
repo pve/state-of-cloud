@@ -12,5 +12,11 @@ sudo easy_install awscli
 aws configure
 ```
 
-Alternatively, there may be different ways to introduce the credentials. 
+Alternatively, there may be different ways to introduce the credentials, i.e. through environment variables.
+
+Usage:
+```
+python aws.py
+```
+
 
