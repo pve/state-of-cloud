@@ -21,9 +21,9 @@ regions = ec2.describe_regions().get('Regions',[] )
 regionnames = [x.get('RegionName', []) for x in regions]
 print(regionnames)
 print("Zones: ", end=" "),
-print(ec2.describe_availability_zones()['AvailabilityZones'])
+# print(ec2.describe_availability_zones()['AvailabilityZones'])
 zones = ec2.describe_availability_zones()['AvailabilityZones']
-zonenames = [x.get('ZoneName', []) for x in zones]
+zonenames = [[x.get('ZoneName', []),x.get('State', [])] for x in zones]
 print(zonenames)
 
 def reservations():
@@ -31,8 +31,12 @@ def reservations():
         reg=region['RegionName']
         print(reg, end=" ")
         ec2con = boto3.client('ec2',region_name=reg)        
-        print(ec2con.describe_instances()['Reservations'])
-# per instance: name, zone, size, tags
+        instancelist = ec2con.describe_instances()['Reservations']
+        instances = [[x.get('Instances')[0].get('PublicDnsName'), x.get('Instances')[0].get('State').get('Name')] for x in instancelist]
+# must be an easier way to do this; flatten?
+        print(instances)
+#       print(ec2con.describe_instances()['Reservations'])
+# per instance: name, zone, size, tags, state
 reservations()
 
 print("S3 buckets...")
