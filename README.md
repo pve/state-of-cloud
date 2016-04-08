@@ -12,7 +12,16 @@ sudo easy_install awscli
 aws configure
 ```
 
-Alternatively, there may be different ways to introduce the credentials, i.e. through environment variables.
+Alternatively, you can introduce the credentials through environment variables.
+
+AWS_ACCESS_KEY_ID
+The access key for your AWS account.
+
+AWS_SECRET_ACCESS_KEY
+The secret key for your AWS account.
+
+AWS_DEFAULT_REGION
+The default region to use, e.g. us-west-2, us-west-2, etc.
 
 Usage:
 ```
