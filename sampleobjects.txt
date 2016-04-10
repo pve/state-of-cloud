@@ -1,0 +1,2 @@
+>>> zones
+[{u'State': 'available', u'RegionName': 'eu-west-1', u'Messages': [], u'ZoneName': 'eu-west-1a'}, {u'State': 'available', u'RegionName': 'eu-west-1', u'Messages': [], u'ZoneName': 'eu-west-1b'}, {u'State': 'available', u'RegionName': 'eu-west-1', u'Messages': [], u'ZoneName': 'eu-west-1c'}]

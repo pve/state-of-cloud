@@ -1,23 +1,11 @@
 http://boto3.readthedocs.org/en/latest/guide/configuration.html
 
-Boto3 will check these environment variables for credentials:
+docker run -e AWS_ACCESS_KEY_ID=$aws_access_key -e AWS_SECRET_KEY=$aws_secret_key -e S3_BUCKET=$s3_bucket -e WORKER_SECRET_KEY=$worker_key -p 5000:5000 -m 0 samalba/docker-registry
 
-AWS_ACCESS_KEY_ID
-The access key for your AWS account.
-AWS_SECRET_ACCESS_KEY
-The secret key for your AWS account.
+https://docs.docker.com/engine/reference/commandline/build/
+https://ryanfb.github.io/etc/2015/07/29/git_strategies_for_docker.html
 
-AWS_DEFAULT_REGION
-The default region to use, e.g. us-west-2, us-west-2, etc.
-
-client = boto3.client(
-    's3',
-    aws_access_key_id=ACCESS_KEY,
-    aws_secret_access_key=SECRET_KEY,
-    aws_session_token=SESSION_TOKN,
-)
-
-docker run -e SETTINGS_FLAVOR=prod -e AWS_ACCESS_KEY_ID=$aws_access_key -e AWS_SECRET_KEY=$aws_secret_key -e S3_BUCKET=$s3_bucket -e WORKER_SECRET_KEY=$worker_key -p 5000:5000 -m 0 samalba/docker-registry
+DONE
 
 http://blog.james-carr.org/2013/09/04/parameterized-docker-containers/
 https://docs.docker.com/docker-cloud/tutorials/python/6_define_environment_variables/
