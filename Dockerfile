@@ -1,19 +1,16 @@
-FROM alpine-3
+FROM alpine:latest
 MAINTAINER pveijk@gmail.com 
 LABEL vendor=www.clubcloudcomputing.com
 
-ENV APPLICATION_USER  application
-ENV APPLICATION_GROUP application
+RUN apk add --update py-pip
+RUN apk add git
 
+RUN git clone https://github.com/pve/state-of-cloud.git
 
-RUN /usr/local/bin/apk-install \
-    # Install services
-    openssh \
+RUN pip install --no-cache-dir -r state-of-cloud/requirements.txt
 
-# Deploy scripts/configurations
-COPY conf/ /opt/docker/
-RUN bash /opt/docker/bin/control.sh provision.role.bootstrap webdevops-base-app \
-    && bash /opt/docker/bin/bootstrap.sh
+ENV AWS_DEFAULT_REGION eu-west-1
+ENV AWS_ACCESS_KEY_ID secret
+ENV AWS_SECRET_ACCESS_KEY secret
 
-ENTRYPOINT ["/opt/docker/aws.py"]
-CMD ["noop"]
+CMD ["python", "/state-of-cloud/aws.py"]
