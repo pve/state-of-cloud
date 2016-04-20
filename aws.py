@@ -34,7 +34,7 @@ def reservations():
         print(reg, end=" ")
         ec2con = boto3.client('ec2',region_name=reg)        
         instancelist = ec2con.describe_instances()['Reservations']
-        instances = [[x.get('Instances')[0].get('PublicDnsName'), x.get('Instances')[0].get('State').get('Name')] for x in instancelist]
+        instances = [[x.get('Instances')[0].get('PublicDnsName'), x.get('Instances')[0].get('InstanceType'), x.get('Instances')[0].get('State').get('Name')] for x in instancelist]
 # must be an easier way to do this; flatten?
         print(instances)
 #       print(ec2con.describe_instances()['Reservations'])

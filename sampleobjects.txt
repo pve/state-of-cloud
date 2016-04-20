@@ -1,2 +1,36 @@
 >>> zones
 [{u'State': 'available', u'RegionName': 'eu-west-1', u'Messages': [], u'ZoneName': 'eu-west-1a'}, {u'State': 'available', u'RegionName': 'eu-west-1', u'Messages': [], u'ZoneName': 'eu-west-1b'}, {u'State': 'available', u'RegionName': 'eu-west-1', u'Messages': [], u'ZoneName': 'eu-west-1c'}]
+
+>>> instancelist
+[{u'OwnerId': '177335221471', u'ReservationId': 'r-58707b9d', u'Groups': [], u'Instances': [{u'Monitoring': {u'State': 'disabled'}, u'PublicDnsName': 'ec2-54-191-49-183.us-west-2.compute.amazonaws.com', u'State': {u'Code': 16, u'Name': 'running'}, u'EbsOptimized': False, u'LaunchTime': datetime.datetime(2016, 4, 10, 19, 37, 36, tzinfo=tzlocal()), u'PublicIpAddress': '54.191.49.183', u'PrivateIpAddress': '172.31.39.223', u'ProductCodes': [], u'VpcId': 'vpc-625ffc07', u'StateTransitionReason': '', u'InstanceId': 'i-ce5e5d09', u'ImageId': 'ami-9abea4fb', u'PrivateDnsName': 'ip-172-31-39-223.us-west-2.compute.internal', u'KeyName': 'oct14', u'SecurityGroups': [{u'GroupName': 'launch-wizard-1', u'GroupId': 'sg-1cf3b97b'}], u'ClientToken': 'SNFGa1460317055792', u'SubnetId': 'subnet-d7ae2ab2', u'InstanceType': 't2.micro', u'NetworkInterfaces': [{u'Status': 'in-use', u'MacAddress': '02:79:32:fd:5a:51', u'SourceDestCheck': True, u'VpcId': 'vpc-625ffc07', u'Description': '', u'Association': {u'PublicIp': '54.191.49.183', u'PublicDnsName': 'ec2-54-191-49-183.us-west-2.compute.amazonaws.com', u'IpOwnerId': 'amazon'}, u'NetworkInterfaceId': 'eni-e125529a', u'PrivateIpAddresses': [{u'PrivateDnsName': 'ip-172-31-39-223.us-west-2.compute.internal', u'Association': {u'PublicIp': '54.191.49.183', u'PublicDnsName': 'ec2-54-191-49-183.us-west-2.compute.amazonaws.com', u'IpOwnerId': 'amazon'}, u'Primary': True, u'PrivateIpAddress': '172.31.39.223'}], u'PrivateDnsName': 'ip-172-31-39-223.us-west-2.compute.internal', u'Attachment': {u'Status': 'attached', u'DeviceIndex': 0, u'DeleteOnTermination': True, u'AttachmentId': 'eni-attach-a1e53556', u'AttachTime': datetime.datetime(2016, 4, 10, 19, 37, 36, tzinfo=tzlocal())}, u'Groups': [{u'GroupName': 'launch-wizard-1', u'GroupId': 'sg-1cf3b97b'}], u'SubnetId': 'subnet-d7ae2ab2', u'OwnerId': '177335221471', u'PrivateIpAddress': '172.31.39.223'}], u'SourceDestCheck': True, u'Placement': {u'Tenancy': 'default', u'GroupName': '', u'AvailabilityZone': 'us-west-2a'}, u'Hypervisor': 'xen', u'BlockDeviceMappings': [{u'DeviceName': '/dev/sda1', u'Ebs': {u'Status': 'attached', u'DeleteOnTermination': True, u'VolumeId': 'vol-2424c492', u'AttachTime': datetime.datetime(2016, 4, 10, 19, 37, 36, tzinfo=tzlocal())}}], u'Architecture': 'x86_64', u'RootDeviceType': 'ebs', u'RootDeviceName': '/dev/sda1', u'VirtualizationType': 'hvm', u'AmiLaunchIndex': 0}]}]
+>>> 
+
+[{
+    u 'OwnerId': '177335221471', u 'ReservationId': 'r-58707b9d', u 'Groups': [], u 'Instances': [{
+        u 'Monitoring': {
+            u 'State': 'disabled'
+        }, u 'PublicDnsName': 'ec2-54-191-49-183.us-west-2.compute.amazonaws.com', u 'State': {
+            u 'Code': 16, u 'Name': 'running'
+        }, u 'EbsOptimized': False, u 'LaunchTime': datetime.datetime(2016, 4, 10, 19, 37, 36, tzinfo = tzlocal()), u 'PublicIpAddress': '54.191.49.183', u 'PrivateIpAddress': '172.31.39.223', u 'ProductCodes': [], u 'VpcId': 'vpc-625ffc07', u 'StateTransitionReason': '', u 'InstanceId': 'i-ce5e5d09', u 'ImageId': 'ami-9abea4fb', u 'PrivateDnsName': 'ip-172-31-39-223.us-west-2.compute.internal', u 'KeyName': 'oct14', u 'SecurityGroups': [{
+            u 'GroupName': 'launch-wizard-1', u 'GroupId': 'sg-1cf3b97b'
+        }], u 'ClientToken': 'SNFGa1460317055792', u 'SubnetId': 'subnet-d7ae2ab2', u 'InstanceType': 't2.micro', u 'NetworkInterfaces': [{
+            u 'Status': 'in-use', u 'MacAddress': '02:79:32:fd:5a:51', u 'SourceDestCheck': True, u 'VpcId': 'vpc-625ffc07', u 'Description': '', u 'Association': {
+                u 'PublicIp': '54.191.49.183', u 'PublicDnsName': 'ec2-54-191-49-183.us-west-2.compute.amazonaws.com', u 'IpOwnerId': 'amazon'
+            }, u 'NetworkInterfaceId': 'eni-e125529a', u 'PrivateIpAddresses': [{
+                u 'PrivateDnsName': 'ip-172-31-39-223.us-west-2.compute.internal', u 'Association': {
+                    u 'PublicIp': '54.191.49.183', u 'PublicDnsName': 'ec2-54-191-49-183.us-west-2.compute.amazonaws.com', u 'IpOwnerId': 'amazon'
+                }, u 'Primary': True, u 'PrivateIpAddress': '172.31.39.223'
+            }], u 'PrivateDnsName': 'ip-172-31-39-223.us-west-2.compute.internal', u 'Attachment': {
+                u 'Status': 'attached', u 'DeviceIndex': 0, u 'DeleteOnTermination': True, u 'AttachmentId': 'eni-attach-a1e53556', u 'AttachTime': datetime.datetime(2016, 4, 10, 19, 37, 36, tzinfo = tzlocal())
+            }, u 'Groups': [{
+                u 'GroupName': 'launch-wizard-1', u 'GroupId': 'sg-1cf3b97b'
+            }], u 'SubnetId': 'subnet-d7ae2ab2', u 'OwnerId': '177335221471', u 'PrivateIpAddress': '172.31.39.223'
+        }], u 'SourceDestCheck': True, u 'Placement': {
+            u 'Tenancy': 'default', u 'GroupName': '', u 'AvailabilityZone': 'us-west-2a'
+        }, u 'Hypervisor': 'xen', u 'BlockDeviceMappings': [{
+            u 'DeviceName': '/dev/sda1', u 'Ebs': {
+                u 'Status': 'attached', u 'DeleteOnTermination': True, u 'VolumeId': 'vol-2424c492', u 'AttachTime': datetime.datetime(2016, 4, 10, 19, 37, 36, tzinfo = tzlocal())
+            }
+        }], u 'Architecture': 'x86_64', u 'RootDeviceType': 'ebs', u 'RootDeviceName': '/dev/sda1', u 'VirtualizationType': 'hvm', u 'AmiLaunchIndex': 0
+    }]
+}]
