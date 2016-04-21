@@ -4,10 +4,10 @@ docker run -e AWS_ACCESS_KEY_ID=$aws_access_key -e AWS_SECRET_KEY=$aws_secret_ke
 
 https://docs.docker.com/engine/reference/commandline/build/
 https://ryanfb.github.io/etc/2015/07/29/git_strategies_for_docker.html
-
+DONE
 docker run  -e AWS_DEFAULT_REGION=us-east-1 petersgriddle/state-of-cloud
 
-DONE
+
 
 http://blog.james-carr.org/2013/09/04/parameterized-docker-containers/
 https://docs.docker.com/docker-cloud/tutorials/python/6_define_environment_variables/
