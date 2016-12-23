@@ -19,7 +19,7 @@ ec2 = boto3.client('ec2',
 )
 
 print("Regions: ", end=" ")
-regions = ec2.describe_regions().get('Regions',[] )
+regions = ec2.describe_regions()['Regions']
 regionnames = [x.get('RegionName', []) for x in regions]
 print(regionnames)
 print("Zones: ", end=" "),
@@ -40,6 +40,7 @@ def reservations():
 #       print(ec2con.describe_instances()['Reservations'])
 # per instance: name, zone, size, tags, state
 reservations()
+
 
 print("S3 buckets...")
 s3 = boto3.client('s3')
