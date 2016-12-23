@@ -39,5 +39,5 @@ Zones:  [['eu-west-1a', 'available'], ['eu-west-1b', 'available'], ['eu-west-1c'
 (S3 bucket list)
 
 ```
-
+[![](https://images.microbadger.com/badges/image/petersgriddle/state-of-cloud.svg)](https://microbadger.com/images/petersgriddle/state-of-cloud "Get your own image badge on microbadger.com")
 
